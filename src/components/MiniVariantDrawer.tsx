@@ -119,14 +119,28 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            오피스플러스
           </Typography>
+
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
+          {/* 이건 < 모양의 버튼 숨김 
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+          </IconButton> */}
+
+<IconButton
+            color="inherit"
+            aria-label="close drawer"
+            onClick={handleDrawerClose}
+            // edge="end"
+            // sx={{
+            //   marginRight: '36px',
+            // }}
+          >
+            <MenuIcon />
           </IconButton>
         </DrawerHeader>
         <Divider />
