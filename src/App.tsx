@@ -3,6 +3,7 @@ import { CssBaseline, ThemeProvider } from '@mui/material';
 import AppBar from './components/AppBar';
 import './App.css';
 import MiniDrawer from "./components/MiniVariantDrawer";
+import TableList from './components/TableList'
 
 import Switch from '@mui/material/Switch';
 import { darkTheme, lightTheme } from './theme';
@@ -23,6 +24,7 @@ function App(): React.ReactElement  {
       <ThemeProvider theme={currentTheme}>
       <CssBaseline>
         <AppBar />
+        <TableList />
         <Switch
           // {...label}
           onClick={toggleTheme}
