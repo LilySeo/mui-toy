@@ -7,6 +7,7 @@ import TableList from './components/TableList'
 
 import Switch from '@mui/material/Switch';
 import { darkTheme, lightTheme } from './theme';
+import SimpleContainer from './containers/SimpleContainer';
 
 function App(): React.ReactElement  {
   const [currentTheme, setCurrentTheme] = useState(lightTheme);
@@ -22,17 +23,17 @@ function App(): React.ReactElement  {
     <div>
       
       <ThemeProvider theme={currentTheme}>
-      <CssBaseline>
-        <AppBar />
+      <CssBaseline />
+        {/* <AppBar />
         <TableList />
         <Switch
           // {...label}
           onClick={toggleTheme}
           defaultChecked
           sx={{ position: 'fixed', bottom: '30px', right: '30px' }}
-        />
+        /> */}
       {/* <MiniDrawer /> */}
-      </CssBaseline>
+      <SimpleContainer />
       </ThemeProvider>
     </div>
   );

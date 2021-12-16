@@ -13,16 +13,25 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
+
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import DrawerLeft from './DrawerLeft';
 
+
+import { EmailOutlined, NotificationsOutlined } from '@mui/icons-material';
+
+
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  // backgroundColor: alpha(theme.palette.common.white, 0.15),
+  // '&:hover': {
+  //   backgroundColor: alpha(theme.palette.common.white, 0.25),
+  // },
+  backgroundColor: 'rgba(0, 0, 0, 0.05)',
   '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
+    backgroundColor: 'rgba(0, 0, 0, 0.08)',
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
@@ -157,7 +166,7 @@ export default function PrimarySearchAppBar() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, borderBottom: '1px solid #d2d2d2' }}>
       <AppBar position="static">
         <Toolbar>
           <DrawerLeft />
@@ -177,7 +186,7 @@ export default function PrimarySearchAppBar() {
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' } }}
           >
-            오피스플러스
+            오피스+
           </Typography>
           <Search>
             <SearchIconWrapper>
@@ -192,7 +201,8 @@ export default function PrimarySearchAppBar() {
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <IconButton size="large" aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="error">
-                <MailIcon />
+                {/* <MailIcon /> */}
+                <EmailOutlined />
               </Badge>
             </IconButton>
             <IconButton
@@ -201,7 +211,8 @@ export default function PrimarySearchAppBar() {
               color="inherit"
             >
               <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
+                {/* <NotificationsIcon /> */}
+                <NotificationsOutlined />
               </Badge>
             </IconButton>
             <IconButton
